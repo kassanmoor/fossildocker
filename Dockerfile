@@ -8,6 +8,7 @@ RUN apt-get update -y
 RUN apt-get install make gcc zlib1g-dev -y
 ADD source /source
 #compilation steps
+RUN chmod 777 source/ -R
 RUN ./source/configure --with-openssl=none
 RUN cd /source & make
 # copying app to path
