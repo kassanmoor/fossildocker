@@ -296,7 +296,7 @@ void style_header(const char *zTitleFormat, ...){
   if( g.thTrace ) Th_Trace("BEGIN_HEADER<br />\n", -1);
 
   /* Generate the header up through the main menu */
-  Th_Store("project_name", db_get("project-name","Unnamed Fossil Project"));
+  Th_Store("project_name", db_get("project-name","TechZone2014 Fossil Project"));
   Th_Store("title", zTitle);
   Th_Store("baseurl", g.zBaseURL);
   Th_Store("home", g.zTop);
