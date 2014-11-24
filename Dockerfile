@@ -7,8 +7,8 @@ MAINTAINER mk
 RUN apt-get update -y
 RUN apt-get install make gcc zlib1g-dev -y
 ADD source /source
-#compilation steps
 RUN chmod 777 source/ -R
+#compilation steps
 RUN ./source/configure --with-openssl=none
 RUN cd /source & make
 # copying app to path
@@ -24,5 +24,5 @@ RUN fossil cache init -R tzrepository.fossil
 
 ENTRYPOINT fossil server tzrepository.fossil
 EXPOSE 8080
-# docker build -t fossil fossil
-# docker run --name fossilcontainer -d -p 8080:8080 -t fossil
+# docker build -t fossilimage /home/fossil/
+# docker run --name fossilcontainer -d -p 9090:8080 -t fossilimage
