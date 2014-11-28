@@ -18,7 +18,7 @@ RUN rm -rf /source
 # Set workdir and start server
 WORKDIR /fossilapp
 RUN fossil new --empty -A admin tzrepository.fossil
-RUN fossil user password -R tzrepository.fossil admin techzone
+RUN fossil user password -R tzrepository.fossil admin newpassword
 RUN fossil cache init -R tzrepository.fossil
 
 
